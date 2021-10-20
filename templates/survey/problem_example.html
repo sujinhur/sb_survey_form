@@ -1,0 +1,47 @@
+{% extends "survey/base.html" %}
+
+{% block content %}
+    
+
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">PROBLEM EXAMPLE</h2>
+        </div>
+        <div class="row d-grid col-6 mx-auto text-center">
+            <p class="lead"><strong>본 설문의 문제 유형은 아래와 같으며, 
+                여러분은 문제에 보여지는 과정을 보시고 해당 기간의 시각화를 보기 위해 어떻게 질문할지 응답란에 입력해주시면 됩니다.</strong></p>     
+        </div>
+        
+        {% if show_ex == 0 %}
+        <div class="row d-grid col-8 mx-auto text-center">
+            <img src="/static/img/비교예시.PNG">
+        </div>
+        <div class="row d-grid col-8 mx-auto text-center">
+            <p class="lead"><strong>위의 이미지를 예로 들어보겠습니다. 위의 이미지는 모바일 화면에서 <u>[비교기간 검색]의 [연도별] 버튼을 터치하여 오른쪽 시각화를 보게되는 과정입니다.</u> 
+                여기에서 여러분은 <u>‘2021년과 2020년도 걸음수 비교해줘’</u>와 같은 질문을 입력해주시면 됩니다. 
+                최대한 실생활에서 사용할만한 자연스러운 질문으로 답변해주세요.</strong></p>
+        
+        </div>
+        {% else %}
+        <div class="row d-grid col-8 mx-auto text-center">
+            <img src="/static/img/1주예시.PNG">
+        </div>
+        <div class="row d-grid col-8 mx-auto text-center">
+            <p class="lead"><strong>위의 이미지를 예로 들어보겠습니다. 위의 이미지는 모바일 화면에서 <u>[1주] 버튼을 터치하여 오른쪽 시각화를 보게되는 과정입니다. </u>
+                여기에서 여러분은 <u>‘최근 1주일 동안 얼마나 걸었는지 보여줘’</u>와 같은 질문을 입력해주시면 됩니다. 
+                최대한 실생활에서 사용할만한 자연스러운 질문으로 답변해주세요.</strong></p>
+        
+        </div>
+        {% endif %}
+
+        <div class="row d-grid col-6 mx-auto text-center">
+            <p class="lead"><strong>'NEXT' 버튼을 클릭해주시기 바랍니다.</strong></p>
+        </div>
+        <div class="d-grid col-4 mx-auto">
+            <button style="margin-bottom: 10%;" type="button" class="btn btn-dark btn-lg" onclick="location.href='attention'">NEXT</button>
+        </div>
+        
+
+    </div> 
+
+{% endblock %}
